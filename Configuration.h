@@ -250,7 +250,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_Y_MIN_INVERTING true
 #define MIN_HARDWARE_ENDSTOP_Y true
 #define ENDSTOP_PULLUP_Z_MIN true
-#define ENDSTOP_Z_MIN_INVERTING false
+#define ENDSTOP_Z_MIN_INVERTING true
 #define MIN_HARDWARE_ENDSTOP_Z true
 #define ENDSTOP_PULLUP_Z2_MINMAX true
 #define ENDSTOP_Z2_MINMAX_INVERTING false
@@ -329,12 +329,12 @@ It also can add a delay to wait for spindle to run on full speed.
 #define INVERT_Z4_DIR 0
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
-#define Z_HOME_DIR -1
-#define X_MAX_LENGTH 200
-#define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 125
-#define X_MIN_POS 8
-#define Y_MIN_POS 12
+#define Z_HOME_DIR 1
+#define X_MAX_LENGTH 140
+#define Y_MAX_LENGTH 140
+#define Z_MAX_LENGTH 130
+#define X_MIN_POS 0
+#define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define PARK_POSITION_X 0
 #define PARK_POSITION_Y 0
@@ -682,7 +682,7 @@ Values must be in range 1..255
     "uiController": 0,
     "xMinEndstop": 1,
     "yMinEndstop": 1,
-    "zMinEndstop": 2,
+    "zMinEndstop": 1,
     "xMaxEndstop": 0,
     "yMaxEndstop": 0,
     "zMaxEndstop": 0,
@@ -700,8 +700,8 @@ Values must be in range 1..255
     "yHomingSpeed": 40,
     "yTravelAcceleration": 1000,
     "yPrintAcceleration": 1000,
-    "zMaxSpeed": 2,
-    "zHomingSpeed": 2,
+    "zMaxSpeed": 7,
+    "zHomingSpeed": 7,
     "zTravelAcceleration": 100,
     "zPrintAcceleration": 100,
     "xMotor": {
@@ -728,12 +728,12 @@ Values must be in range 1..255
     "backlashZ": 0,
     "stepperInactiveTime": 360,
     "maxInactiveTime": 0,
-    "xMinPos": 8,
-    "yMinPos": 12,
+    "xMinPos": 0,
+    "yMinPos": 0,
     "zMinPos": 0,
-    "xLength": 200,
-    "yLength": 200,
-    "zLength": 125,
+    "xLength": 140,
+    "yLength": 140,
+    "zLength": 130,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -741,7 +741,7 @@ Values must be in range 1..255
     "disableE": "0",
     "xHomeDir": "-1",
     "yHomeDir": "-1",
-    "zHomeDir": "-1",
+    "zHomeDir": "1",
     "xEndstopBack": 1,
     "yEndstopBack": 1,
     "zEndstopBack": 0,
