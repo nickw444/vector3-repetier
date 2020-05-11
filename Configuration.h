@@ -329,7 +329,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define INVERT_Z4_DIR 0
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
-#define Z_HOME_DIR 1
+#define Z_HOME_DIR -1
 #define X_MAX_LENGTH 140
 #define Y_MAX_LENGTH 140
 #define Z_MAX_LENGTH 130
@@ -450,7 +450,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define KEEP_ALIVE_INTERVAL 2000
 #define WAITING_IDENTIFIER "wait"
 #define ECHO_ON_EXECUTE 1
-#define EEPROM_MODE 1
+#define EEPROM_MODE 2
 #undef PS_ON_PIN
 #define PS_ON_PIN -1
 #define JSON_OUTPUT 0
@@ -613,7 +613,7 @@ Values must be in range 1..255
     "xInvert": 0,
     "x2Invert": 0,
     "xInvertEnable": 0,
-    "eepromMode": 1,
+    "eepromMode": 2,
     "yInvert": 0,
     "y2Invert": 0,
     "yInvertEnable": 0,
@@ -741,7 +741,7 @@ Values must be in range 1..255
     "disableE": "0",
     "xHomeDir": "-1",
     "yHomeDir": "-1",
-    "zHomeDir": "1",
+    "zHomeDir": "-1",
     "xEndstopBack": 1,
     "yEndstopBack": 1,
     "zEndstopBack": 0,
