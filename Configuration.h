@@ -295,7 +295,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define max_software_endstop_z true
 #define DOOR_PIN -1
 #define DOOR_PULLUP 1
-#define DOOR_INVERTING 1
+#define DOOR_INVERTING 0
 #define ENDSTOP_X_BACK_MOVE 5
 #define ENDSTOP_Y_BACK_MOVE 5
 #define ENDSTOP_Z_BACK_MOVE 2
@@ -1211,7 +1211,7 @@ Values must be in range 1..255
     "extruderIsZProbe": "0",
     "boardFanMinSpeed": 0,
     "doorPin": -1,
-    "doorEndstop": 1,
+    "doorEndstop": 0,
     "zhomePreRaise": 0,
     "zhomePreRaiseDistance": 10,
     "dualXResolution": "0",
