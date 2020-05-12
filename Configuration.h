@@ -302,8 +302,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_X_RETEST_REDUCTION_FACTOR 3
 #define ENDSTOP_Y_RETEST_REDUCTION_FACTOR 3
 #define ENDSTOP_Z_RETEST_REDUCTION_FACTOR 3
-#define ENDSTOP_X_BACK_ON_HOME 1
-#define ENDSTOP_Y_BACK_ON_HOME 1
+#define ENDSTOP_X_BACK_ON_HOME 7
+#define ENDSTOP_Y_BACK_ON_HOME 15
 #define ENDSTOP_Z_BACK_ON_HOME 0
 #define ALWAYS_CHECK_ENDSTOPS 1
 #define MOVE_X_WHEN_HOMED 0
@@ -742,8 +742,8 @@ Values must be in range 1..255
     "xHomeDir": "-1",
     "yHomeDir": "-1",
     "zHomeDir": "-1",
-    "xEndstopBack": 1,
-    "yEndstopBack": 1,
+    "xEndstopBack": 7,
+    "yEndstopBack": 15,
     "zEndstopBack": 0,
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
