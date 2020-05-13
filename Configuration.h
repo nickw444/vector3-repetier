@@ -84,7 +84,7 @@
 #define EXT0_Y_OFFSET 0
 #define EXT0_Z_OFFSET 0
 #define EXT0_STEPS_PER_MM 99.615
-#define EXT0_TEMPSENSOR_TYPE 1
+#define EXT0_TEMPSENSOR_TYPE 5
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
 #define EXT0_STEP_PIN ORIG_E0_STEP_PIN
@@ -151,8 +151,109 @@
 #define SCALE_PID_TO_MAX 0
 #define TEMP_HYSTERESIS 0
 #define EXTRUDE_MAXLENGTH 160
-#define NUM_TEMPS_USERTHERMISTOR0 0
-#define USER_THERMISTORTABLE0 {}
+#define NUM_TEMPS_USERTHERMISTOR0 100
+#define USER_THERMISTORTABLE0 { \
+    { 1 * 4 , 500 * 8 }, \
+    { 12 * 4 , 300 * 8 }, \
+    { 14 * 4 , 288 * 8 }, \
+    { 23 * 4 , 254 * 8 }, \
+    { 31 * 4 , 234 * 8 }, \
+    { 40 * 4 , 220 * 8 }, \
+    { 66 * 4 , 192 * 8 }, \
+    { 80 * 4 , 182 * 8 }, \
+    { 92 * 4 , 175 * 8 }, \
+    { 109 * 4 , 167 * 8 }, \
+    { 120 * 4 , 162 * 8 }, \
+    { 124 * 4 , 160 * 8 }, \
+    { 131 * 4 , 157 * 8 }, \
+    { 142 * 4 , 153 * 8 }, \
+    { 147 * 4 , 151 * 8 }, \
+    { 156 * 4 , 148 * 8 }, \
+    { 163 * 4 , 146 * 8 }, \
+    { 181 * 4 , 141 * 8 }, \
+    { 196 * 4 , 137 * 8 }, \
+    { 218 * 4 , 132 * 8 }, \
+    { 278 * 4 , 120 * 8 }, \
+    { 295 * 4 , 117 * 8 }, \
+    { 307 * 4 , 115 * 8 }, \
+    { 319 * 4 , 113 * 8 }, \
+    { 325 * 4 , 112 * 8 }, \
+    { 338 * 4 , 110 * 8 }, \
+    { 345 * 4 , 109 * 8 }, \
+    { 352 * 4 , 108 * 8 }, \
+    { 359 * 4 , 107 * 8 }, \
+    { 366 * 4 , 106 * 8 }, \
+    { 373 * 4 , 105 * 8 }, \
+    { 380 * 4 , 104 * 8 }, \
+    { 387 * 4 , 103 * 8 }, \
+    { 394 * 4 , 102 * 8 }, \
+    { 401 * 4 , 101 * 8 }, \
+    { 409 * 4 , 100 * 8 }, \
+    { 416 * 4 , 99 * 8 }, \
+    { 424 * 4 , 98 * 8 }, \
+    { 432 * 4 , 97 * 8 }, \
+    { 439 * 4 , 96 * 8 }, \
+    { 447 * 4 , 95 * 8 }, \
+    { 455 * 4 , 94 * 8 }, \
+    { 462 * 4 , 93 * 8 }, \
+    { 470 * 4 , 92 * 8 }, \
+    { 478 * 4 , 91 * 8 }, \
+    { 486 * 4 , 90 * 8 }, \
+    { 494 * 4 , 89 * 8 }, \
+    { 502 * 4 , 88 * 8 }, \
+    { 511 * 4 , 87 * 8 }, \
+    { 519 * 4 , 86 * 8 }, \
+    { 527 * 4 , 85 * 8 }, \
+    { 535 * 4 , 84 * 8 }, \
+    { 543 * 4 , 83 * 8 }, \
+    { 552 * 4 , 82 * 8 }, \
+    { 560 * 4 , 81 * 8 }, \
+    { 568 * 4 , 80 * 8 }, \
+    { 576 * 4 , 79 * 8 }, \
+    { 585 * 4 , 78 * 8 }, \
+    { 593 * 4 , 77 * 8 }, \
+    { 601 * 4 , 76 * 8 }, \
+    { 610 * 4 , 75 * 8 }, \
+    { 618 * 4 , 74 * 8 }, \
+    { 626 * 4 , 73 * 8 }, \
+    { 634 * 4 , 72 * 8 }, \
+    { 643 * 4 , 71 * 8 }, \
+    { 651 * 4 , 70 * 8 }, \
+    { 659 * 4 , 69 * 8 }, \
+    { 667 * 4 , 68 * 8 }, \
+    { 675 * 4 , 67 * 8 }, \
+    { 691 * 4 , 65 * 8 }, \
+    { 707 * 4 , 63 * 8 }, \
+    { 714 * 4 , 62 * 8 }, \
+    { 722 * 4 , 61 * 8 }, \
+    { 737 * 4 , 59 * 8 }, \
+    { 744 * 4 , 58 * 8 }, \
+    { 752 * 4 , 57 * 8 }, \
+    { 766 * 4 , 55 * 8 }, \
+    { 773 * 4 , 54 * 8 }, \
+    { 787 * 4 , 52 * 8 }, \
+    { 794 * 4 , 51 * 8 }, \
+    { 807 * 4 , 49 * 8 }, \
+    { 814 * 4 , 48 * 8 }, \
+    { 826 * 4 , 46 * 8 }, \
+    { 833 * 4 , 45 * 8 }, \
+    { 845 * 4 , 43 * 8 }, \
+    { 856 * 4 , 41 * 8 }, \
+    { 862 * 4 , 40 * 8 }, \
+    { 872 * 4 , 38 * 8 }, \
+    { 883 * 4 , 36 * 8 }, \
+    { 892 * 4 , 34 * 8 }, \
+    { 902 * 4 , 32 * 8 }, \
+    { 915 * 4 , 29 * 8 }, \
+    { 923 * 4 , 27 * 8 }, \
+    { 935 * 4 , 24 * 8 }, \
+    { 942 * 4 , 22 * 8 }, \
+    { 952 * 4 , 19 * 8 }, \
+    { 963 * 4 , 15 * 8 }, \
+    { 973 * 4 , 11 * 8 }, \
+    { 981 * 4 , 7 * 8 }, \
+    { 990 * 4 , 2 * 8 }, \
+}
 #define NUM_TEMPS_USERTHERMISTOR1 0
 #define USER_THERMISTORTABLE1 {}
 #define NUM_TEMPS_USERTHERMISTOR2 0
@@ -168,7 +269,7 @@
 #define HEATED_BED_PREHEAT_TEMP 55
 #define HEATED_BED_MAX_TEMP 120
 #define SKIP_M190_IF_WITHIN 3
-#define HEATED_BED_SENSOR_TYPE 1
+#define HEATED_BED_SENSOR_TYPE 5
 #define HEATED_BED_SENSOR_PIN TEMP_1_PIN
 #define HEATED_BED_HEATER_PIN HEATER_1_PIN
 #define HEATED_BED_SET_INTERVAL 5000
@@ -629,7 +730,7 @@ Values must be in range 1..255
             "pidDriveMin": 40,
             "pidDriveMax": 230,
             "pidMax": 255,
-            "sensorType": 1,
+            "sensorType": 5,
             "sensorPin": "TEMP_0_PIN",
             "heaterPin": "HEATER_0_PIN",
             "maxFeedrate": 50,
@@ -851,7 +952,7 @@ Values must be in range 1..255
     "uiExtruderRetractDistance": 3,
     "uiSpeeddependentPositioning": "0",
     "maxBedTemperature": 120,
-    "bedSensorType": 1,
+    "bedSensorType": 5,
     "bedSensorPin": "TEMP_1_PIN",
     "bedHeaterPin": "HEATER_1_PIN",
     "bedHeatManager": 0,
@@ -1259,7 +1360,7 @@ Values must be in range 1..255
     "hasGeneric1": false,
     "hasGeneric2": false,
     "hasGeneric3": false,
-    "hasUser0": false,
+    "hasUser0": true,
     "hasUser1": false,
     "hasUser2": false,
     "numExtruder": 1,
