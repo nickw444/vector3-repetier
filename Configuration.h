@@ -100,15 +100,15 @@
 #define EXT0_MAX_FEEDRATE 50
 #define EXT0_MAX_START_FEEDRATE 20
 #define EXT0_MAX_ACCELERATION 5000
-#define EXT0_HEAT_MANAGER 3
+#define EXT0_HEAT_MANAGER 1
 #define EXT0_PREHEAT_TEMP 190
 #define EXT0_WATCHPERIOD 1
-#define EXT0_PID_INTEGRAL_DRIVE_MAX 230
+#define EXT0_PID_INTEGRAL_DRIVE_MAX 100
 #define EXT0_PID_INTEGRAL_DRIVE_MIN 40
-#define EXT0_PID_PGAIN_OR_DEAD_TIME 7
-#define EXT0_PID_I 2
-#define EXT0_PID_D 40
-#define EXT0_PID_MAX 255
+#define EXT0_PID_PGAIN_OR_DEAD_TIME 3.49
+#define EXT0_PID_I 0.09
+#define EXT0_PID_D 32.73
+#define EXT0_PID_MAX 200
 #define EXT0_ADVANCE_K 0
 #define EXT0_ADVANCE_L 0
 #define EXT0_ADVANCE_BACKLASH_STEPS 0
@@ -118,7 +118,7 @@
 #define EXT0_DESELECT_COMMANDS ""
 #define EXT0_EXTRUDER_COOLER_PIN 4
 #define EXT0_EXTRUDER_COOLER_SPEED 255
-#define EXT0_DECOUPLE_TEST_PERIOD 12000
+#define EXT0_DECOUPLE_TEST_PERIOD 24000
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
 
@@ -728,8 +728,8 @@ Values must be in range 1..255
             "id": 0,
             "heatManager": 3,
             "pidDriveMin": 40,
-            "pidDriveMax": 230,
-            "pidMax": 255,
+            "pidDriveMax": 100,
+            "pidMax": 200,
             "sensorType": 5,
             "sensorPin": "TEMP_0_PIN",
             "heaterPin": "HEATER_0_PIN",
@@ -739,9 +739,9 @@ Values must be in range 1..255
             "invertEnable": "0",
             "acceleration": 5000,
             "watchPeriod": 1,
-            "pidP": 7,
-            "pidI": 2,
-            "pidD": 40,
+            "pidP": 3.49,
+            "pidI": 0.09,
+            "pidD": 32.73,
             "advanceK": 0,
             "advanceL": 0,
             "waitRetractTemp": 150,
@@ -765,7 +765,7 @@ Values must be in range 1..255
                 "enable": "ORIG_E0_ENABLE_PIN"
             },
             "advanceBacklashSteps": 0,
-            "decoupleTestPeriod": 12,
+            "decoupleTestPeriod": 24,
             "jamPin": -1,
             "jamPullup": "0",
             "mirror": "0",
