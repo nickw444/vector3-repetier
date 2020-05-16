@@ -71,8 +71,8 @@
 #define MIXING_EXTRUDER 0
 
 #define DRIVE_SYSTEM 0
-#define XAXIS_STEPS_PER_MM 78.82
-#define YAXIS_STEPS_PER_MM 78.82
+#define XAXIS_STEPS_PER_MM 76.8976
+#define YAXIS_STEPS_PER_MM 85.2108
 #define ZAXIS_STEPS_PER_MM 2560
 #define EXTRUDER_FAN_COOL_TEMP 50
 #define PDM_FOR_EXTRUDER 0
@@ -435,9 +435,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR 1
-#define X_MAX_LENGTH 120
-#define Y_MAX_LENGTH 135
-#define Z_MAX_LENGTH 130
+#define X_MAX_LENGTH 135
+#define Y_MAX_LENGTH 110
+#define Z_MAX_LENGTH 125.8
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
