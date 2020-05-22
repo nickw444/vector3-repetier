@@ -45,7 +45,7 @@
 // ################ END MANUAL SETTINGS ##########################
 
 #undef FAN_PIN
-#define FAN_PIN -1
+#define FAN_PIN 4
 #undef FAN_BOARD_PIN
 #define FAN_BOARD_PIN -1
 #define BOARD_FAN_SPEED 255
@@ -120,7 +120,7 @@
 #define EXT0_WAIT_RETRACT_UNITS 0
 #define EXT0_SELECT_COMMANDS ""
 #define EXT0_DESELECT_COMMANDS ""
-#define EXT0_EXTRUDER_COOLER_PIN 4
+#define EXT0_EXTRUDER_COOLER_PIN -1
 #define EXT0_EXTRUDER_COOLER_SPEED 255
 #define EXT0_DECOUPLE_TEST_PERIOD 24000
 #define EXT0_JAM_PIN -1
