@@ -1,0 +1,33 @@
+diff -r --exclude Configuration.h Repetier/HAL.h . Repetier/HAL.h
+65c65
+< #define EXTERNALSERIAL
+---
+> // #define EXTERNALSERIAL
+69c69
+< #define EXTERNALSERIAL
+---
+> // #define EXTERNALSERIAL
+diff -r --exclude Configuration.h Repetier/gcode.cpp Repetier/gcode.cpp
+1324c1324
+< SerialGCodeSource serial1Source(&RFSERIAL2);
+---
+> SerialGCodeSource serial1Source(&RFSERIAL);
+1328,1334c1328
+< #if BLUETOOTH_SERIAL > 0
+< fast8_t GCodeSource::numSources = 2; ///< Number of data sources available
+< fast8_t GCodeSource::numWriteSources = 2;
+< GCodeSource *GCodeSource::sources[MAX_DATA_SOURCES] = {&serial0Source,&serial1Source};
+< GCodeSource *GCodeSource::writeableSources[MAX_DATA_SOURCES] = {&serial0Source,&serial1Source};
+< #else
+< fast8_t GCodeSource::numSources = 1; ///< Number of data sources available
+---
+> fast8_t GCodeSource::numSources = 1;
+1336,1339c1330,1332
+< GCodeSource *GCodeSource::sources[MAX_DATA_SOURCES] = {&serial0Source};      
+< GCodeSource *GCodeSource::writeableSources[MAX_DATA_SOURCES] = {&serial0Source};
+< #endif    
+< GCodeSource *GCodeSource::activeSource = &serial0Source;
+---
+> GCodeSource *GCodeSource::sources[MAX_DATA_SOURCES] = {&serial1Source};
+> GCodeSource *GCodeSource::writeableSources[MAX_DATA_SOURCES] = {&serial1Source};
+> GCodeSource *GCodeSource::activeSource = &serial1Source;

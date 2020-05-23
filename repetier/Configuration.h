@@ -66,7 +66,7 @@
 // Uncomment the following line if you are using Arduino compatible firmware made for Arduino version earlier then 1.0
 // If it is incompatible you will get compiler errors about write functions not being compatible!
 //#define COMPAT_PRE1
-#define BLUETOOTH_SERIAL  -1
+#define BLUETOOTH_SERIAL 1
 #define BLUETOOTH_BAUD  115200
 #define MIXING_EXTRUDER 0
 
