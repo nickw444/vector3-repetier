@@ -66,6 +66,31 @@ Repetier was straightforward enough to configure and flash to my controller via 
 - [ ] Front button: Not possible. controlled via i2c on the daughter board.
 - [ ] Front button LED: Not possible. controlled via i2c on the daughter board.
 
+## Bed Adhesion Hacks
+
+Bed adhesion is quite tricky on this machine (or perhaps my lack of 3D printing experience is to 
+blame) here. However, I have found that I can improve bed adhesion with the following:
+
+* Use masking tape to cover the bed
+* Ensure bed is completely flat (duh) and printer height correctly set
+* Slow down first layer when printing - 20mm/s first layer speed seems to help
+* Prime the extruder prior to printing using custom G-code
+
+### Filament Start G-code
+
+```
+G1 E15 F100 ; prime/extrude 15mm into dump area
+G92 E0 ; reset extruder
+```
+
+### Printer Start G-code
+
+```
+G28 ; home all axes
+G1 X140 Y0 Z2 F5000 ; lift nozzle 2mm and go to dump area
+```
+
+Pre-configured PrusaSlicer configuration can be found in the [PrusaSlicer](PrusaSlicer) directory.
 
 ### Things I Did
 
