@@ -1,4 +1,4 @@
-# Eaglemoss Vector 3 Repetier Firmware Configuration
+# Eaglemoss Vector 3 3D Printer Repetier Firmware Configuration
 
 In this repository you will find:
 
@@ -46,6 +46,7 @@ Repetier was straightforward enough to configure and flash to my controller via 
     * Check belts are tight (mine were loose)
     * Adjust X/Y steps per mm if confirmed that belts are tight and not slipping
 * Unrecoverable timeouts during printing
+    * Replace stock firmware with Repetier and add HC-06 Bluetooth serial
 
 ## Features
 
@@ -72,8 +73,10 @@ Repetier was straightforward enough to configure and flash to my controller via 
     * Experiencing drop out and pausing during printing
     * Annoying to re-flash as have to use an old version of Arduino
     * Managed to calibrate X/Y/Z axis
+        * In retrospect this calibration was unnecessary, the underlying issue was loose belts
 * Attempted re-flash of [Repetier-FW](https://www.repetier.com/documentation/repetier-firmware/)
     * Compiled using Arduino V1.8.12 against [Sanguino](https://github.com/Lauszus/Sanguino), makes dev loop easier for tweaking
+    * Due to legacy bootloader, have to manually change boards.txt to support firmware flash at 57600 baud.
     * Slightly better in terms of reliability. 
     * Still experiencing drop outs and pausing during printing
     * Flaky connection, does not connect with my Macbook Pro
@@ -82,6 +85,7 @@ Repetier was straightforward enough to configure and flash to my controller via 
     * Brown out detection @ 4.7V (guess)
     * 16MHZ External Clock
     * Sanguino Pinout
+    * Can now flash without legacy baud change in boards.txt
 * Compiled Repetier against [MightyCore](https://github.com/MCUdude/MightyCore) (instead of [Sanguino](https://github.com/Lauszus/Sanguino))
     * Drop outs seem to have decreased.
     * Initiating a connection is near instant
@@ -103,3 +107,4 @@ Repetier was straightforward enough to configure and flash to my controller via 
       Repetier 1.0.3. [Source](https://forum.repetier.com/discussion/5317/second-uart-for-bluetooth-isnt-working-after-upgrade-from-0-9-2-to-1-0-1)
     * Recompiled
         * Re-enabled watchdog
+    * Bluetooth connection appears more reliable than USB for printing
